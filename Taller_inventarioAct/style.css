@@ -1,0 +1,17 @@
+h1,h2{
+    text-align: center;
+}
+
+#opciones{
+    text-align: center;
+    display: grid;
+}
+
+#respuesta1,#respuesta2,#respuesta3,#respuesta4,#respuesta5{
+    
+    margin: 20px;
+}
+
+input, select{
+    background-color: gray ;
+}

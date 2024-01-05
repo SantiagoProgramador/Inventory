@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de alimentos.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Inventario en linea
+        
+    </h1>
+    <h2><small class="text-body-secondary">Por favor selecciona una opción.</small></h2>
+    <div id="opciones" class="text-bg-light p-3">
+        <label for="opcion1">1. Añadir producto. </label>
+        <button id="opcion1" onclick="caso(1)" class="btn btn-success">Seleccionar</button>
+        
+        <label for="opcion2">2. Eliminar producto.</label>
+        <button id="opcion2" onclick="caso(2)" class="btn btn-success">Seleccionar</button>
+        
+        <label for="opcion3">3. Modificar producto.</label>
+        <button id="opcion3" onclick="caso(3)" class="btn btn-success">Seleccionar</button>
+        
+        <label for="opcion4">4. Buscar producto.</label>
+        <button id="opcion4" onclick="caso(4)" class="btn btn-success">Seleccionar</button>
+       
+        <label for="opcion5">5. Filtrar por precio</label>
+        <button id="opcion5" onclick="caso(5)" class="btn btn-success">Seleccionar</button>
+        
+        <label for="opcion6">6. Salir.</label>
+        <button id="opcion6" onclick="caso(6)" class="btn btn-success">Seleccionar</button>
+    </div>
+
+    <div hidden id="respuesta1" class="text-bg-primary p-3">
+        
+        <div>
+            <label for="nombreProducto">Ingrese el nombre del producto que desea añadir:</label>
+            <input  id="nombreProducto" required>
+
+            <label for="productoCantidad">Ingrese la cantidad:</label>
+            <input type="number" id="productoCantidad" required>
+            
+            <label for="productoPrecio">Ingrese el precio:</label>
+            <input type="number" id="productoPrecio" required>
+
+            <label for="marca">Ingrese la marca del producto:</label>
+            <input type="text" id="marca" required>
+
+            <button id="respuestaOpcion1" onclick="Addproducto()" class="btn btn-success">Enviar</button>
+        </div>
+        <div>
+            <p id="resultados1"></p>
+        </div>
+    </div>
+
+    <div hidden id="respuesta2" class="text-bg-danger p-3">
+        
+        <div>
+            <label for="nombreProductoE">Ingrese el nombre del producto que desea Eliminar:</label>
+            <select name="eliminar" id="eliminar">
+                <option>Selecciona un valor</option>
+            </select>
+            <button id="respuestaOpcion2" onclick="eliminarProducto2()" class="btn btn-success">Enviar</button>
+        </div>
+        <div>
+            <p id="resultados2"></p>
+        </div>
+    </div>
+
+    <div hidden id="respuesta3" class="text-bg-warning p-3">
+        <div>
+            <label for="nombreProductoM">Seleccione el nombre del producto que desea modificar:</label>
+                <select name="modificar" id="modificar">
+                    <option>Selecciona un valor</option>
+                </select>
+
+                <label for="productoCantidad">Ingrese la cantidad:</label>
+                <input type="number" id="productoCantidad" required>
+                
+                <label for="productoPrecio">Ingrese el precio:</label>
+                <input type="number" id="productoPrecio" required>
+
+                <label for="marca">Ingrese la marca del producto:</label>
+                <input type="text" id="marca" required>
+
+                <button id="respuestaOpcion3" onclick="modificarProducto()" class="btn btn-success">Enviar</button>
+        </div>
+        <div>
+            <p id="resultados3"></p>
+        </div>    
+    </div>
+
+    <div hidden id="respuesta4" class="text-bg-info p-3">
+        
+        <div>
+            <label for="nombreProductoB">Ingrese el nombre del producto que desea Buscar:</label>
+            <input  id="nombreProductoM" required>
+
+            <button id="respuestaOpcion4" onclick="buscarProducto()" class="btn btn-success">Enviar</button>
+        </div>
+        <div>
+            <p id="resultados4"></p>
+        </div>
+    </div>
+    
+    <div hidden id="respuesta5" class="text-bg-light p-3">
+        
+        <div>
+            <label for="valorminimo">Ingrese el valor mínimo:</label>
+            <input  id="minimo" required type="number">
+            <label for="valormaximo">Ingrese el valor máximo:</label>
+            <input  id="maximo" required type="number">
+            <button id="respuestaOpcion5" onclick="filtrarPrecio()" class="btn btn-success">Enviar</button>
+        </div>
+        <div>
+            <p id="resultados5"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
